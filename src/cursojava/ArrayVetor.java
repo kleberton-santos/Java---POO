@@ -21,13 +21,42 @@ public class ArrayVetor {
 		
 		aluno.getDisciplina().add(disciplina);
 		
-		System.out.println("Nome do aluno = " + aluno.getNome() + " Idade = " + aluno.getIdade());
-		for (Disciplina d : aluno.getDisciplina()) {
-			System.out.println(d.getDisciplina());
-			for (int pos = 0; pos < d.getNota().length; pos++) {
-				System.out.println("nota " +(pos + 1)+ " igual = " + d.getNota()[pos]);
+		Aluno[] arrayAlunos = new Aluno[1];
+		
+		arrayAlunos[0] = aluno;
+		
+		for(int pos = 0; pos < arrayAlunos.length; pos++) {
+			System.out.println("Nome do aluno: " + arrayAlunos[pos].getNome());
+			
+			for(Disciplina d: arrayAlunos[pos].getDisciplina()) {
+				System.out.println("Nome da disciplina: " + d.getDisciplina());
+				
+				for(int posnota = 0; posnota < d.getNota().length; posnota++) {
+					System.out.println("A nota numero " + (posnota + 1) + " é " + d.getNota()[posnota]);
+				}
 			}
 		}
+		
+		
+		
+		
+//		System.out.println("Nome do aluno = " + aluno.getNome() + " Idade = " + aluno.getIdade());
+//		for (Disciplina d : aluno.getDisciplina()) {
+//			System.out.println(d.getDisciplina());
+//			
+//			double notaMax = 0.0;
+//			for (int pos = 0; pos < d.getNota().length; pos++) {
+//				System.out.println("nota " +(pos + 1)+ " igual = " + d.getNota()[pos]);
+//				if(pos == 0) {
+//					notaMax = d.getNota()[pos];
+//				} else
+//					if(d.getNota()[pos] > notaMax) {
+//					notaMax = d.getNota()[pos];
+//				}
+//			}
+//			
+//			System.out.println("A Maior nota da Disciplina = " + d.getDisciplina() + "e de valor: " + notaMax);
+//		}
 		
 		
 		
